@@ -11,7 +11,8 @@ int n=sc.nextInt();
 String arr[]={fn,ln};
 Arrays.sort(arr);
 String res="";
-res=((fn.length()>ln.length())?fn.substring(0,1)+ln:(fn.length()==ln.length())?arr[0].substring(0,1)+arr[1]:ln.substring(0,1)+fn);
+//System.out.println(arr[0]);
+res=((fn.length()>ln.length())?fn.substring(0,1)+ln:(fn.length()==ln.length())?arr[1].substring(0,1)+arr[0]:ln.substring(0,1)+fn);
 for(int i=0;i<res.length();i++)
 {
 char ch=res.charAt(i);
@@ -20,6 +21,7 @@ System.out.print(String.valueOf(ch).toUpperCase());
 else
 System.out.print(String.valueOf(ch).toLowerCase());
 }
-System.out.print(pin.charAt(n)+""+pin.charAt(pin.length()-n));
+System.out.print(pin.charAt(n-1)+""+pin.charAt(pin.length()-n));
 }
 }
+
